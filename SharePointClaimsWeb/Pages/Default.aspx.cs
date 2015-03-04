@@ -43,9 +43,24 @@ namespace SharePointClaimsWeb
 
             using (var clientContext = this.GetClientContextWithAccessToken("https://jcistage.sharepoint.com/sites/secondlevel/"))
             {
-                clientContext.Load(clientContext.Web, web => web.Title);
+                //clientContext.Load(clientContext.Web, web => web.Title);
+                //clientContext.ExecuteQuery();
+                //Response.Write(clientContext.Web.Title);
+
+                Web web = clientContext.Web;
+                var props = web.AllProperties;
+                web.Context.Load(props);
+                web.Context.ExecuteQuery();
+
+                props["test"] = "update";
+                web.Update();
+                web.Context.ExecuteQuery();
+
+
+                clientContext.Load(web, w => w.AllProperties);
                 clientContext.ExecuteQuery();
-                Response.Write(clientContext.Web.Title);
+                Response.Write(web.AllProperties["test"].ToString());
+                //  Response.Write("updated successfully");
             }
         }
 
