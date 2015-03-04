@@ -8,10 +8,15 @@
 >
   <Properties>
     <Title>SharePointClaims</Title>
-    <StartPage>https://claimsprovider.azurewebsites.net/default.aspx?{StandardTokens}</StartPage>
+    <StartPage>https://claimsprovider.azurewebsites.net/pages/default.aspx?{StandardTokens}</StartPage>
   </Properties>
 
   <AppPrincipal>
     <RemoteWebApplication ClientId="f240f79b-ab39-4a7d-a5a6-cf90a175c87c" />
   </AppPrincipal>
+  <AppPermissionRequests>
+    <AppPermissionRequest Scope="http://sharepoint/content/tenant" Right="FullControl" />
+    <AppPermissionRequest Scope="http://sharepoint/content/sitecollection" Right="FullControl" />
+    <AppPermissionRequest Scope="http://sharepoint/content/sitecollection/web/list" Right="FullControl" />
+  </AppPermissionRequests>
 </App>

@@ -121,6 +121,7 @@
   <ItemGroup>
     <Content Include="Global.asax" />
     <Content Include="Pages\Default.aspx" />
+    <None Include="Properties\PublishProfiles\pub5.pubxml" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
