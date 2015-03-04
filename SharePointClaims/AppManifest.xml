@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--Created:cb85b80c-f585-40ff-8bfc-12ff4d0e34a9-->
+<App xmlns="http://schemas.microsoft.com/sharepoint/2012/app/manifest"
+     Name="SharePointClaims"
+     ProductID="{2b71c249-7bdd-4235-a496-2c663b7f487b}"
+     Version="1.0.0.0"
+     SharePointMinVersion="16.0.0.0"
+>
+  <Properties>
+    <Title>SharePointClaims</Title>
+    <StartPage>https://claimsprovider.azurewebsites.net/default.aspx?{StandardTokens}</StartPage>
+  </Properties>
+
+  <AppPrincipal>
+    <RemoteWebApplication ClientId="f240f79b-ab39-4a7d-a5a6-cf90a175c87c" />
+  </AppPrincipal>
+</App>
