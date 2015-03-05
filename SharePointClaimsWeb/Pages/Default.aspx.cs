@@ -42,8 +42,8 @@ namespace SharePointClaimsWeb
 
             //
             //https://jcistage.sharepoint.com/"
-            using (var clientContext = this.GetClientContextWithAccessToken("https://apps.jci.com/sites/jvijayra/"))
-            {
+            //using (var clientContext = this.GetClientContextWithAccessToken("https://apps.jci.com/sites/jvijayra/"))
+            //{
                 //clientContext.Load(clientContext.Web, web => web.Title);
                 //clientContext.ExecuteQuery();
                 //Response.Write(clientContext.Web.Title);
@@ -65,9 +65,13 @@ namespace SharePointClaimsWeb
           */
 
 
-            }
+          //  }
+        //    Uri hostWeb =
+        //new Uri("https://jcistage.sharepoint.com/");
+            
+
             Uri hostWeb =
-        new Uri(Request.QueryString["SPHostUrl"]);
+       new Uri(Request.QueryString["SPHostUrl"]);
 
             using (var clientContext = TokenHelper.GetS2SClientContextWithWindowsIdentity(hostWeb, Request.LogonUserIdentity))
             {
