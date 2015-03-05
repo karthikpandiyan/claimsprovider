@@ -26,4 +26,3 @@ D:\JCI\ClaimsProvider\SharePointClaims\SharePointClaimsWeb\bin\System.Web.Extens
 D:\JCI\ClaimsProvider\SharePointClaims\SharePointClaimsWeb\bin\System.Web.Services.dll
 D:\JCI\ClaimsProvider\SharePointClaims\SharePointClaimsWeb\bin\System.Xml.dll
 D:\JCI\ClaimsProvider\SharePointClaims\SharePointClaimsWeb\bin\System.Xml.Linq.dll
-D:\JCI\ClaimsProvider\SharePointClaims\SharePointClaimsWeb\obj\Debug\SharePointClaimsWeb.csprojResolveAssemblyReference.cache

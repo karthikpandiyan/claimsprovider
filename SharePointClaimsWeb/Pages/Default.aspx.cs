@@ -75,8 +75,8 @@ namespace SharePointClaimsWeb
                   clientContext.Web, web => web.Title);
                 clientContext.ExecuteQuery();
                 Response.Write(clientContext.Web.Title);
-                clientContext.Web.Title =
-                   DateTime.Now.ToLongTimeString();
+                //clientContext.Web.Title =
+                //   DateTime.Now.ToLongTimeString();
                 clientContext.Web.Update();
                 clientContext.ExecuteQuery();
             }
