@@ -7,12 +7,12 @@
      SharePointMinVersion="16.0.0.0"
 >
   <Properties>
-    <Title>SharePointClaimsss</Title>
+    <Title>SharePointClaims2</Title>
     <StartPage>https://claimsprovider.azurewebsites.net/pages/default.aspx?{StandardTokens}</StartPage>
   </Properties>
 
   <AppPrincipal>
-    <RemoteWebApplication ClientId="db0cee29-f3c4-496b-94c1-650d5d78e703" />
+    <RemoteWebApplication ClientId="6427abf3-aa8c-45fb-83de-4ca40e1a104c" />
   </AppPrincipal>
   <AppPermissionRequests AllowAppOnlyPolicy="true">
     <AppPermissionRequest Scope="http://sharepoint/content/tenant" Right="FullControl" />

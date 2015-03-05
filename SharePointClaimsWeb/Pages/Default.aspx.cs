@@ -40,8 +40,9 @@ namespace SharePointClaimsWeb
             //    Response.Write(clientContext.Web.Title);
             //}
 
-
-            using (var clientContext = this.GetClientContextWithAccessToken("https://jcistage.sharepoint.com/"))
+            //
+            //https://jcistage.sharepoint.com/"
+            using (var clientContext = this.GetClientContextWithAccessToken("https://apps.jci.com/sites/jvijayra/"))
             {
                 //clientContext.Load(clientContext.Web, web => web.Title);
                 //clientContext.ExecuteQuery();
