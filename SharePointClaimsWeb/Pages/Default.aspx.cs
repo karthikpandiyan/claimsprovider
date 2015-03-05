@@ -59,10 +59,10 @@ namespace SharePointClaimsWeb
                 web.Context.ExecuteQuery();
 
 
-                clientContext.Load(web, w => w.AllProperties);
+                clientContext.Load(web, w => w.AllProperties,w=>w.Url);
                 clientContext.ExecuteQuery();
                 Response.Write(web.AllProperties["test"].ToString());
-        
+                Response.Write(web.Url);
 
 
             }
