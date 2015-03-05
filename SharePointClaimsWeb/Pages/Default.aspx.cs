@@ -42,13 +42,13 @@ namespace SharePointClaimsWeb
 
             //
             //https://jcistage.sharepoint.com/"
-            //using (var clientContext = this.GetClientContextWithAccessToken("https://apps.jci.com/sites/jvijayra/"))
-            //{
+            using (var clientContext = this.GetClientContextWithAccessToken("https://jcistage.sharepoint.com/sites/secondlevel/"))
+            {
                 //clientContext.Load(clientContext.Web, web => web.Title);
                 //clientContext.ExecuteQuery();
                 //Response.Write(clientContext.Web.Title);
 
-                /*
+            
                 Web web = clientContext.Web;
                 var props = web.AllProperties;
                 web.Context.Load(props);
@@ -62,28 +62,28 @@ namespace SharePointClaimsWeb
                 clientContext.Load(web, w => w.AllProperties);
                 clientContext.ExecuteQuery();
                 Response.Write(web.AllProperties["test"].ToString());
-          */
+        
 
 
-          //  }
+            }
         //    Uri hostWeb =
         //new Uri("https://jcistage.sharepoint.com/");
             
 
-            Uri hostWeb =
-       new Uri(Request.QueryString["SPHostUrl"]);
+       //     Uri hostWeb =
+       //new Uri(Request.QueryString["SPHostUrl"]);
 
-            using (var clientContext = TokenHelper.GetS2SClientContextWithWindowsIdentity(hostWeb, Request.LogonUserIdentity))
-            {
-                clientContext.Load(
-                  clientContext.Web, web => web.Title);
-                clientContext.ExecuteQuery();
-                Response.Write(clientContext.Web.Title);
-                //clientContext.Web.Title =
-                //   DateTime.Now.ToLongTimeString();
-                clientContext.Web.Update();
-                clientContext.ExecuteQuery();
-            }
+       //     using (var clientContext = TokenHelper.GetS2SClientContextWithWindowsIdentity(hostWeb, Request.LogonUserIdentity))
+       //     {
+       //         clientContext.Load(
+       //           clientContext.Web, web => web.Title);
+       //         clientContext.ExecuteQuery();
+       //         Response.Write(clientContext.Web.Title);
+       //         //clientContext.Web.Title =
+       //         //   DateTime.Now.ToLongTimeString();
+       //         clientContext.Web.Update();
+       //         clientContext.ExecuteQuery();
+       //     }
         }
 
         /// <summary>
