@@ -42,13 +42,46 @@ namespace SharePointClaimsWeb
 
             //
             //https://jcistage.sharepoint.com/"
-            using (var clientContext = this.GetClientContextWithAccessToken("https://jcistage.sharepoint.com/sites/secondlevel/"))
-            {
-                //clientContext.Load(clientContext.Web, web => web.Title);
-                //clientContext.ExecuteQuery();
-                //Response.Write(clientContext.Web.Title);
+            ////////////////using (var clientContext = this.GetClientContextWithAccessToken("https://jcistage.sharepoint.com/sites/secondlevel/"))
+            ////////////////{
+            ////////////////    //clientContext.Load(clientContext.Web, web => web.Title);
+            ////////////////    //clientContext.ExecuteQuery();
+            ////////////////    //Response.Write(clientContext.Web.Title);
 
             
+            ////////////////    Web web = clientContext.Web;
+            ////////////////    var props = web.AllProperties;
+            ////////////////    web.Context.Load(props);
+            ////////////////    web.Context.ExecuteQuery();
+
+            ////////////////    props["test"] = "update";
+            ////////////////    web.Update();
+            ////////////////    web.Context.ExecuteQuery();
+
+
+            ////////////////    clientContext.Load(web, w => w.AllProperties,w=>w.Url);
+            ////////////////    clientContext.ExecuteQuery();
+            ////////////////    Response.Write(web.AllProperties["test"].ToString());
+            ////////////////    Response.Write(web.Url);
+
+
+            ////////////////}
+
+            //
+
+            var spContext = SharePointContextProvider.Current.GetSharePointContext(Context);
+
+            using (var clientContext = spContext.CreateUserClientContextForSPHost())
+            {
+                //Web web = clientContext.Web;
+                //clientContext.Load(web);
+                //clientContext.ExecuteQuery();
+
+                //ListCollection lists = web.Lists;
+                //clientContext.Load<ListCollection>(lists);
+                //clientContext.ExecuteQuery();
+
+
                 Web web = clientContext.Web;
                 var props = web.AllProperties;
                 web.Context.Load(props);
@@ -59,13 +92,12 @@ namespace SharePointClaimsWeb
                 web.Context.ExecuteQuery();
 
 
-                clientContext.Load(web, w => w.AllProperties,w=>w.Url);
+                clientContext.Load(web, w => w.AllProperties, w => w.Url);
                 clientContext.ExecuteQuery();
                 Response.Write(web.AllProperties["test"].ToString());
                 Response.Write(web.Url);
-
-
             }
+            //
         //    Uri hostWeb =
         //new Uri("https://jcistage.sharepoint.com/");
             
