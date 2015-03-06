@@ -55,7 +55,7 @@ namespace SharePointClaimsWeb
                 web.Context.Load(props);
                 web.Context.ExecuteQuery();
 
-                props["test"] = "sampleProp";
+                props["test"] = "sampleProp5";
                 web.Update();
                 web.Context.ExecuteQuery();
 
