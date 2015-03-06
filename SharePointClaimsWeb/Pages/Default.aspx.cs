@@ -43,7 +43,7 @@ namespace SharePointClaimsWeb
             //
             //https://jcistage.sharepoint.com/"
             //"https://jcistage.sharepoint.com/sites/secondlevel/
-            using (var clientContext = this.GetClientContextWithAccessToken("https://jcistage.sharepoint.com/sites/secondlevel/"))
+            using (var clientContext = this.GetClientContextWithAccessToken("https://jcistage.sharepoint.com/sites/dev"))
             {
                 //clientContext.Load(clientContext.Web, web => web.Title);
                 //clientContext.ExecuteQuery();
