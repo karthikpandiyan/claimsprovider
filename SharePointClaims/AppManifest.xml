@@ -3,7 +3,7 @@
 <App xmlns="http://schemas.microsoft.com/sharepoint/2012/app/manifest"
      Name="SharePointClaims"
      ProductID="{2b71c249-7bdd-4235-a496-2c663b7f487b}"
-     Version="6.0.0.0"
+     Version="7.0.0.0"
      SharePointMinVersion="16.0.0.0"
 >
   <Properties>
